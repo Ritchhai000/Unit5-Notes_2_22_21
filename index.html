@@ -6,6 +6,7 @@
 </head>
 <body style="background-color: #eeeeee">
     <h1 style="color: #ffd369">HTML NOTES</h1>
+    <a href="cssNotes.html">CSS Notes Page</a>
 
     <hr>
 
@@ -62,6 +63,8 @@
 
     <p style="background-color: #393e46; color: #ffd369; font-family: Impact; font-size: 72px">This paragraph has all 4 inline styles.</p>
 
+    <hr>
+
     <h1 style="color:#ffd369">Images</h1>
     <p>An <b>image element</b> is an <i>inline</i> element which inserts pictures into the document. An image element is self-0closing, which means it does not have a closing tag. It has one major attribute, src, which is a filepath that points to the images' location. Those filepaths can either be <b>absolute</b> or <b>relative</b>.</p>
 
@@ -88,6 +91,44 @@
     <img src="https://www.suicidecallbackservice.org.au/wp-content/uploads//03/Nature-as-a-healer-header.jpg" alt="A pathway running through a lush, vibrant green forest." width="50%">
 
     <img src="https://www.suicidecallbackservice.org.au/wp-content/uploads//03/Nature-as-a-healer-header.jpg" title="A pathway running through a lush, vibrant green forest." width="50%">
+
+    <h2>Relative vs. Absolute</h2>
+    <p>An <b>absolute</b> filepath includes all the navigation to get to the server, folder, and file. The examples above are all absolute filepaths. An absolute filepath is used when the image is stored on a different server or device than the HTML document.</p>
+    <p>A <b>relative</b> filepath only includes folders and files. The example below is a relative filepath. A relative filepath is used when the images are stored alongside the HTML document.</p>
+
+    <img src="bench.jpg" width="150" alt="Bench on a hillside overlooking huge mountains.">
+
+    <hr>
+
+    <h1 style="color: #ffd369">Links</h1>
+    <p>The <b>Anchor element</b> is an <i>inline element</i> and is a way to include hypertext links, otherwise known as just links, in your document. An anchor is a reference point for other documents for files. It commonly has three attributes: <i>href</i>, <i>target</i>, and <i>download</i>.</p>
+
+    <h2>A Simple Link</h2>
+    <a href="http://ihasabucket.com/">This link will open in this window.</a>
+
+    <p>In order for the link to work it <b>MUST</b> include the <i>href</i> attribute. This attribute is the filepath, either absolute or relative, to the document, website or file you wish to link.</p>
+
+    <h2>Link Attributes</h2>
+    <p>The <i>target</i> attribute allows you to decide where the link opens.There are four option, but we will only discuss two in this course. <i>_black</i> opens the linked document in a new tab. <i>_self</i> opens the document in the current window or tab, This is the default behavior.</p>
+
+    <a href="http://ihasabucket.com/" target="_blank">This link will open in a new tab.</a>
+
+    <p>The <i>download</i> attribute allows you to download the file or document linked and assign it a new filename. This is commonly used only with relative filepaths.</p>
+
+    <a href="bench.jpg" download="benchPicture">This will download a bench picture.</a>
+
+    <h2>A Picture as a Link</h2>
+    <p>Since a link has an opening AND a closing tag, we can place ANY HTML ELEMENT as its content, which includes pictures. We simply nest the image element inside the anchor element.</p>
+
+    <a href="http://ihasabucket.com/" target="_blank">
+        <img src="bench.jpg" width="150px" alt="Bench on a hillside overlooking huge mountains.">
+    </a>
+
+    <h2>Link to Another Page</h2>
+
+    <a href="cssNotes.html">CSS Notes Page</a>
+
+    <hr>
 
 </body>
 </html>
