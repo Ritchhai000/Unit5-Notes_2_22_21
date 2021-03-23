@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Unit 5 Notes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -10,6 +11,42 @@
     <a href="index.html">HTML Notes Page</a>
 
     <hr>
+
+    <h1>External CSS Document</h1>
+    <p>CSS stands for cascading stylesheet. It applies style in the form of colors, fonts, spacing, and much more. We have already seen some CSS styling in the inline styles we did. However, this is not how CSS is typically done. CSS typically has its own sheet, a <b>stylesheet</b>, which defines the style for any HTML element you wish.</p>
+    <p>To begin, we will need to create a new file in this project. This file is commonly called <code>style.css</code>. Once we have created a CSS stylesheet, we must <b>LINK IT</b> to the HTML documents. See the head section above to link CSS Stylesheet.</p>
+
+    <hr>
+
+    <h1>CSS Syntax</h1>
+    <p>CSS is written similar to Java, in that each statement must end in a semi-colon. Brackets are used to denote a group of styles for one element. Each block of style first selects an HTML element. This is called the <b>selector</b>. ANY HTML element can be a selector. The style below selects all paragraph elements and sets its color to blue.</p>
+    <pre><code>
+    p{
+
+        color: blue;
+
+    }</code></pre>
+
+    <h1>Hierarchy of CSS</h1>
+    <p>Hierarchy means, if two different styles attempt to style the same element, hierarchy determines which is shown. In CSS, and in most languages, hierarchy is determined by what gets processed last. The head section of pages gets processed first, then the HTML gets loaded and styles processed. So any inline CSS will override any CSS in an external document.</p>
+
+    <h1>Review Known Styles</h1>
+    <p><code>color</code> changes the foreground color. <code>background-color</code> changes the background color. <code>font-family</code> changes the font style and <code>font-size</code> changes the size of the font.</p>
+
+    <hr>
+
+    <h1>Custom Selectors</h1>
+    <p>Sometimes we want the same styling on two different HTML elements We can select more than one element by separating each with a comma in the selector of the CSS. The code below selects both the paragraph element and the un-ordered list elements.</p>
+
+    <h2>Selecting Multiple Elements</h2>
+    <pre><code>
+        p, ul{
+
+            color: blue;
+
+        }
+    </code></pre>
+
 
 </body>
 </html>

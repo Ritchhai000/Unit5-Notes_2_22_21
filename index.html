@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Unit 5 Notes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #eeeeee">
-    <h1 style="color: #ffd369">HTML NOTES</h1>
+<body>
+    <h1>HTML NOTES</h1>
     <a href="cssNotes.html">CSS Notes Page</a>
 
     <hr>
 
-    <h1 style="color: #ffd369">Headers</h1>
+    <h1>Headers</h1>
     <p>Headers are used to create titles and section titles. There are 6 different sizes pre-formatted for HTML.</p>
     <h1>h1 - Computer Science</h1>
     <h2>h2 - Computer Science</h2>
@@ -23,7 +24,7 @@
 
     <hr>
 
-    <h1 style="color: #ffd369"><u>Test Formatting</u></h1>
+    <h1><u>Test Formatting</u></h1>
     <p>There are three main types of test formatting. Those are: <b>Bold</b>, <i>Italics</i>, and <u>Underline</u>.</p>
 
     <h2><u>Inline vs. Block Elements</u></h2>
@@ -45,7 +46,7 @@
 
     <hr>
 
-    <h1 style="color: #ffd369">Attributes</h1>
+    <h1>Attributes</h1>
     <p><b>Attributes</b> are properties which can change an HTML element. Attriutes are written in the opening tag of ANY html element. The most common attributes are <i>src</i>, <i>href</i>, <i>class</i>, <i>id</i>, and <i>style</i>.</p>
 
     <h2>Inline CSS Styles</h2>
@@ -65,7 +66,7 @@
 
     <hr>
 
-    <h1 style="color:#ffd369">Images</h1>
+    <h1>Images</h1>
     <p>An <b>image element</b> is an <i>inline</i> element which inserts pictures into the document. An image element is self-0closing, which means it does not have a closing tag. It has one major attribute, src, which is a filepath that points to the images' location. Those filepaths can either be <b>absolute</b> or <b>relative</b>.</p>
 
     <h2>Simple Image Example</h2>
@@ -100,7 +101,7 @@
 
     <hr>
 
-    <h1 style="color: #ffd369">Links</h1>
+    <h1>Links</h1>
     <p>The <b>Anchor element</b> is an <i>inline element</i> and is a way to include hypertext links, otherwise known as just links, in your document. An anchor is a reference point for other documents for files. It commonly has three attributes: <i>href</i>, <i>target</i>, and <i>download</i>.</p>
 
     <h2>A Simple Link</h2>
@@ -129,6 +130,106 @@
     <a href="cssNotes.html">CSS Notes Page</a>
 
     <hr>
+
+    <h1>Lists</h1>
+    <p>There are two main types of lists. An <b>unordered list</b> is a bulleted list of items. An <b>ordered list</b> is a numbered list of items. In an ordered list, the style of the list can be altered using attributes <i>list-style-type</i>, and <i>type</i>. You can also change the order and numbering of a ordered list by using the attributes <i>start</i>, <i>reserved</i>, and <i>value</i>.</p>
+
+    <h2>Simple Lists</h2>
+    <p>A list is a container iwht items nested in it.</p>
+    <p>This is an unordered list:</p>
+    <ul>
+        <li>This is a list item.</li>
+        <li>This is another list item.</li>
+        <li>This is pizza!</li>
+        <li>Baz-inga!</li>
+    </ul>
+
+    <p>This is an ordered list:</p>
+    <ol>
+        <li>This is a list item.</li>
+        <li>This is another list item.</li>
+        <li>This is pizza!</li>
+        <li>Baz-inga!</li>
+    </ol>
+
+    <h2>List Attributes</h2>
+    <p>An unordered list only has ONE attribute, <i>list-style-type</i>. It can have values of <i>disc (default)</i>, <i>circle</i>, <i>square</i>, and <i>none</i>.</p>
+
+    <ul style="list-style-type: circle">
+        <li>This is a list item.</li>
+        <li>This is another list item.</li>
+        <li>This is pizza!</li>
+        <li>Baz-inga!</li>
+    </ul>
+
+    <p>An ordered list has multiple attributes broken into two sets, The first set of attributes determines the type of numbering to use. The second set determines values for the items in the set.</p>
+    <p>The attribute <i>type</i> determine what numbering system to use. There are 4 different types:</p>
+
+    <ul>
+        <li>type = 1, number (default)</li>
+        <li>type = A, uppercase letters</li>
+        <li>type = a, lowercase letters</li>
+        <li>type = I, uppercase Roman numerals</li>
+        <li>type = i, lowercase Roman numerals</li>
+    </ul>
+
+    <p>This ordered list uses uppercase Roman numerals:</p>
+
+    <ol type="I">
+        <li>This is a list item.</li>
+        <li>This is another list item.</li>
+        <li>This is pizza!</li>
+        <li>Baz-inga!</li>
+    </ol>
+
+    <p>The attributes <i>start</i> and <i>value</i> can change the numbering of the list. <i>Start</i> changes where the number begins and <i>value</i> changes a specific list item to a chosen value.</p>
+
+    <p>This ordered list is staring at 5, but the middle item will have a value of 10.</p>
+
+    <ol start="5">
+        <li>This is a list item.</li>
+        <li value="10">This is another list item.</li>
+        <li>This is pizza!</li>
+        <li>Baz-inga!</li>
+    </ol>
+
+    <p>Lastly, the <i>reversed</i> attribute makes the numbering go backwards.</p>
+
+    <ol start="10" type="A" reversed>
+        <li>This is a list item.</li>
+        <li>This is another list item.</li>
+        <li>This is pizza!</li>
+        <li>Baz-inga!</li>
+    </ol>
+
+    <h2>Nested Lists</h2>
+
+    <p>Like all things in HTML, we can put lists inside of lists. </p>
+
+    <h3>My Favorite Movies By Genre</h3>
+    <ul>
+        <li>Horror
+            <ol>
+                <li>Saw</li>
+                <li>A Quiet Place</li>
+                <li>Hereditary</li>
+            </ol>
+        </li>
+        <li>Fantasy
+            <ul>
+                <li>Lord of the Rings</li>
+                <li>Narnia Trilogy</li>
+                <li>Harry Potter</li>
+            </ul>
+        </li>
+        <li>Comdey
+            <ol>
+                <li>Click</li>
+                <li>Mall Cop</li>
+                <li>Monty Python and the Holy Grail</li>
+            </ol>
+        </li>
+    </ul>
 
 </body>
 </html>
